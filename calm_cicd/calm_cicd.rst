@@ -13,9 +13,9 @@ Countless studies have shown that reducing the amount of time for developers to 
 
 .. _here: https://www.cloudbees.com/jenkins/about
 
-In this lab, we'll utilize Nutanix Calm to build the infrastructure required to create a Continuous Integration / Continuous Delivery (CI/CD) Pipeline, which includes deploying Jenkins, a Gitea_ git server, a developer workstation, and configuring that workstation.  Once the infrastructure is deployed via Nutanix Calm, we'll go through configuring Jenkins and Gitea to create a fully function CI/CD pipeline.  The end result will be a developer running a "git push", which triggers Jenkins to build a docker container based on the new code, publishes that container to private DockerHub registry, and then deploys the application
+In this lab, we'll utilize Nutanix Calm to build the infrastructure required to create a Continuous Integration / Continuous Delivery (CI/CD) Pipeline, which includes deploying Jenkins, a Gitolite_ git server, a developer workstation, and configuring that workstation.  Once the infrastructure is deployed via Nutanix Calm, we'll go through configuring Jenkins and Gitolite to create a fully function CI/CD pipeline.  The end result will be a developer running a "git push", which triggers Jenkins to build a docker container based on the new code, publishes that container to private DockerHub registry, and then deploys the application
 
-.. _Gitea: https://gitea.io/en-us/
+
 
 .. figure:: images/01_cicd_pipeline.png
     :align: center
@@ -40,17 +40,15 @@ Building a CI/CD pipeline generally involves connecting a large number of dispar
        :align: center
        :alt: Nutanix Calm CI/CD Infrastructure Blueprint Launch 1
 
-#. Select the Project and wait a few seconds to launch
+#. Select the Project and wait a few seconds to launch.
 
   .. figure:: images/SelectProject.png
 
 #.  On the launch page, fill in the following fields.
 
    - **Name of the Application** - *initials*-DEV_ENV_GP
-   - **gitea_password** - Any password desired, which will be set as the Gitea admin user password
-   - **karbon_cluster_name** - The name of the Karbon cluster to use for this lab (it **must** already be depoyed).  If the cluster was staged, leave the default of **karbon_bootcamp_cluster**.
-
-   .. figure:: images/AppLaunch.png.png
+   
+   .. figure:: images/AppLaunch.png
        :align: center
        :alt: Nutanix Calm CI/CD Infrastructure Blueprint Launch 2
 
@@ -70,7 +68,7 @@ Once your Jenkins_Master and Jenkins_Slave Services have been fully deployed, mo
 
 #.  This is the picture of successful launch.  
 
-   .. figure:: images/Successful-Launch.png
+   .. figure:: images/Successful-launch.png
        :align: center
 
 
