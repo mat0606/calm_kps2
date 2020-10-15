@@ -1,0 +1,1 @@
+cat /home/centos/CA/admin-key.pem

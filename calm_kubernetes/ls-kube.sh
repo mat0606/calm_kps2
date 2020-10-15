@@ -1,0 +1,1 @@
+ls -la $HOME/.kube
