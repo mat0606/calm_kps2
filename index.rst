@@ -38,7 +38,7 @@
   :name: _calm_cicd
   :hidden:
 
-  calm_kubernetes/calm_cicd
+  calm_cicd/calm_cicd
 
 .. toctree::
   :maxdepth: 2
